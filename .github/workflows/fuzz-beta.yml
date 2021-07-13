@@ -23,6 +23,7 @@ jobs:
       run: |
         go get golang.org/dl/gotip
         gotip download dev.fuzz
+        go mod init
         
     - name: Fuzz
       run: gotip test -fuzz=FuzzImage
